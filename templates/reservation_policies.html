@@ -1,0 +1,72 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12" style="height:370px; padding:0px; background-color:black;">
+            <img class="contact_header" src="{% static 'img/bw.jpg' %}" 
+            style="background-image: url({{ STATIC_URL }}{{'img/bw.jpg'}});
+            width:100%;
+            height: 100%;
+            object-position: center;
+            object-fit: cover;
+            opacity:0.6;
+            "
+            >
+            <h1 style="
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color:white;">POLITICAS RESERVACION</h1>
+        </div>
+    </div>
+    <div class="container">
+    <div class="row mt-5 mb-5">
+        
+        <div class="col-md-12 mt-5 text-center">
+            <p>Políticas de Reservaciones:
+ Se requiere ser mayor de edad (18 años) para registrarse en hotel.
+ Check in 15:00hrs y el check out 12:30hrs.
+ Todas las reservaciones deben ser garantizadas con tarjeta de crédito. Se
+aceptan VISA, MASTERCARD, AMERICAN EXPRESS.
+ Por cuestiones de seguridad, se le solicitará en el momento del check
+in una identificación oficial y la misma tarjeta de crédito con la que realizó la
+reservación.
+ 10 días previos al check in el establecimiento realizará una pre-autorización
+del crédito de la tarjeta con la que se garantizó la reservación y mantener
+activa su reservación. En caso de declinar dicha transacción, la reservación
+queda automáticamente cancelada.
+ Late Check Out - (Sujeto a disponibilidad) en el caso de que el huésped no
+haya desocupado la habitación a más tardar a las 12:30 hrs, y de acuerdo a
+la disponibilidad de ocupación del Hotel, éste podrá realizar un cargo
+adicional a la tarjeta proporcionada correspondiente al 50% de la tarifa de la
+reservación. En ningún caso un “late check out” podrá exceder a las
+16:00hrs, de lo contrario aplicará el 100% de la tarifa del día.
+ Early Check In - (Sujeto a disponibilidad) se podrá asignar al huésped la
+habitación reservada antes del horario de Check In (15:00 hrs) siempre y
+cuando la habitación esté disponible. Puede aplicar cargos adicionales.
+ Política de menores: El hospedaje es gratuito para niños menores de 10
+años compartiendo habitación y camas existentes con sus padres, siempre
+y cuando no exceda la capacidad de la habitación. Aplicará un cargo extra
+para niños mayores de 10 años de edad y/o persona adicional a la
+reservación original.
+ La capacidad máxima de personas dependerá del tipo habitación
+reservado.
+
+ Política de mascotas: No se admiten mascotas.
+ Tarifas en base a ocupación doble por habitación por noche, expresada en
+moneda nacional – MXN.
+ Impuestos aplicables son el 16% IVA y el 3% ISH.
+ Tarifas sujetas a cambios sin previo aviso.</p>
+        </div>
+
+        
+
+    </div>
+    </div>
+</div>
+
+{% endblock %}

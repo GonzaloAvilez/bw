@@ -1,0 +1,57 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12" style="height:370px; padding:0px; background-color:black;">
+            <img class="contact_header" src="{% static 'img/bw.jpg' %}" 
+            style="background-image: url({{ STATIC_URL }}{{'img/bw.jpg'}});
+            width:100%;
+            height: 100%;
+            object-position: center;
+            object-fit: cover;
+            opacity:0.6;
+            "
+            >
+            <h1 style="
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color:white;">CONTACTO</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 offset-md-2 col-sm-12 text-center mb-5 mt-5">
+          <form role="form" action="" method="post">
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="form-group">
+                    {{ field.errors }}
+                    <label for="{{ field.id_for_label }}"></label>
+                    {{ field }}
+                </div>
+            {% endfor %}
+            <button type="submit" class="btn btn-primary">Enviar</button>  
+          </form>
+        </div>
+        <div class="col-md-4 col-sm-12 text-left mb-5">
+         
+        <p style="padding-top:20%;"><i class="fas fa-home ml-3 mr-3"></i> Calle J. Nibbi 2, Centro, 40200 Taxco, Guerrero, México.</p>
+        <p><i class="fas fa-envelope ml-3  mr-3"></i>reservaciones@bestwesterntaxco.com.mx</p>
+        <p><i class="fas fa-phone ml-3 mr-3"></i>762 622 3416  |  762 627 6194  |  800 561 2663</p>
+        <p><i class="fas fa-mobile ml-3 mr-3"></i>762 128 7622</p>
+        </div>
+    </div>
+    <div class="row mb-5">
+        <div class="col-xs col-md-6 offset-md-3 text-center">
+            <div class="embed-responsive embed-responsive-16by9">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.416398720045!2d-99.60900678544832!3d18.555256787388707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cc4b3623ca8235%3A0x574f535e40f0d277!2sBest%20Western%20Taxco!5e0!3m2!1ses!2smx!4v1592548931447!5m2!1ses!2smx" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="embed-responsive-item"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,154 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12" style="height:370px; padding:0px; background-color:black;">
+            <img class="contact_header" src="{% static 'img/bw.jpg' %}" 
+            style="background-image: url({{ STATIC_URL }}{{'img/bw.jpg'}});
+            width:100%;
+            height: 100%;
+            object-position: center;
+            object-fit: cover;
+            opacity:0.6;
+            "
+            >
+            <h1 style="
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color:white;">HABITACIONES</h1>
+        </div>
+    </div>
+    <div class="container">
+    <div class="row mt-5 mb-5">
+        
+        <div class="col-md-12 mt-3 text-center">
+            <h2>Amenidades</h2>
+        </div>
+
+        <div class="row px-auto mx-auto justify-content-center pt-2 pb-3">
+            <div class="col-lg-4 col-sm-12 services">
+                <li>✔Aire acondicionado</li>
+                <li>✔TV de pantalla plana</li>
+                <li>✔Canales por cable</li>
+                <li>✔Ducha y baño</li>
+                <li>✔Artículos de aseo gratuitos</li>
+                <li>✔Toallas</li>
+                <li>✔Kleenex</li>
+                <li>Espejo de vanidad (en suites)</li>
+            </div>
+            <div class="col-lg-4 col-sm-12 services">
+                <li>Secadora de cabello</li>
+                <li>Espejo cuerpo completo</li>
+                <li>Conexión WiFi</li>
+                <li>Buró</li>
+                <li>Caja de seguridad(en suites)</li>
+                <li>Mesa de trabajo</li>
+                <li>Mini refrigerador(en suites)</li>
+                <li>Servicio de limpieza</li>
+            </div>
+            <div class="col-lg-4 col-sm-12 services">
+                <li>Plancha y tabla de planchar(bajo solicitud)</li>
+                <li>Teléfono</li>
+                <li>Radio reloj</li>
+                <li>Servicio de despertador</li>
+                <li>Cafetera y café incluido</li>
+                <li>Botellas de agua en cortesía</li>
+            </div>
+        </div>
+
+        <div class="col-md-5 mt-5">
+            <div class="" style="height:250px;">
+                <a href="">
+                    <img  class="" src="{% static '/img/rooms/estandar_individual.png'%}" alt="Spa" style="
+                    width:100%; 
+                    height:100%; 
+                    object-position: center;
+                    object-fit: cover;
+                    ">
+                </a>
+            </div>
+        </div>
+        <div class="col-md-7 mt-5">
+            <h2>Estándar Individual.</h2>
+            <p class="text-justify">Disfrute de un merecido descanso en nuestra habitación estándar que ofrece una cama doble, ideal para 1 o 2 personas. Equipada con magníficos servicios y amenidades para su confort: aire acondicionado, TV de pantalla plana y cable, ducha y baño, artículos de aseo gratuitos, secador de pelo, espejo de cuerpo completo, conexión wifi, buró, teléfono, radio-reloj despertador, cafetera y café incluido, agua embotellada de cortesía.</p>
+        </div>
+
+        
+        <div class="col-md-7 mt-5">
+            <h2>Estándar King Size</h2>
+            <p class="text-justify">La habitación ofrece una cama extra-grande ideal para 2 personas, equipada con todo lo necesario para asegurar su confort y descanso. Disponen de aire acondicionado, TV de pantalla plana y cable, ducha y baño, artículos de aseo gratuitos, secador de pelo, espejo de cuerpo completo, conexión wifi, mesa de trabajo, buró, teléfono, radio-reloj despertador, cafetera y café incluido, agua embotellada de cortesía. </p>
+            
+        </div>
+        <div class="col-md-5 mt-5">
+            <a href="">
+                <img  class="" src="{% static '/img/rooms/estandar_king_size.png'%}" alt="Estandar King Size" style="
+                width:100%; 
+                height: auto; 
+                object-position: center;
+                object-fit: cover;
+                ">
+            </a>
+        </div>
+
+
+        <div class="col-md-5 mt-5">
+            <div class="" style="height:250px;">
+                <a href="">
+                    <img  class="" src="{% static '/img/rooms/doble_estandar.png'%}" alt="Doble Estandar" style="
+                    width:100%; 
+                    height:100%; 
+                    object-position: center;
+                    object-fit: cover;
+                    ">
+                </a>
+            </div>
+        </div>
+        <div class="col-md-7 mt-5">
+            <h2>Doble Estándar (2 camas dobles).</h2>
+            <p class="text-justify">Disfrute de un merecido descanso en nuestra habitación doble estándar equipada con dos camas dobles, perfecta para una estancia en familia. Dispone de aire acondicionado, TV de pantalla plana y cable, ducha y baño, artículos de aseo gratuitos, secador de pelo, espejo de cuerpo completo, conexión wifi, mesa de trabajo, buró, teléfono, radio-reloj despertador, cafetera y café incluido, agua embotellada de cortesía. </p>
+        </div>
+
+        
+        <div class="col-md-7 mt-5">
+            <h2>Suite King Size</h2>
+            <p class="text-justify">Disfrute de una agradable estancia en nuestra habitación suite equipada con una cama extra-grande ideal para 2 personas. Dispone de una pequeña terracita-balcón,  aire acondicionado, TV de pantalla plana y cable, ducha y baño, artículos de aseo gratuitos, espejo de vanidad, secador de pelo, espejo de cuerpo completo, conexión wifi, caja de seguridad, mesa de trabajo, 2 burós, sillón de lectura, refrigerador, plancha y tabla de planchar, teléfono, radio-reloj despertador, cafetera y café incluido, agua embotellada de cortesía.</p>
+            
+        </div>
+        <div class="col-md-5 mt-5">
+            <a href="">
+                <img  class="" src="{% static '/img/rooms/suite_king_size.png'%}" alt="Suite King Size" style="
+                width:100%; 
+                height: auto; 
+                object-position: center;
+                object-fit: cover;
+                ">
+            </a>
+        </div>
+
+        <div class="col-md-5 mt-5">
+            <div class="" style="height:250px;">
+                <a href="">
+                    <img  class="" src="{% static '/img/rooms/suite_familiar.png'%}" alt="Suite Familiar" style="
+                    width:100%; 
+                    height:100%; 
+                    object-position: center;
+                    object-fit: cover;
+                    ">
+                </a>
+            </div>
+        </div>
+        <div class="col-md-7 mt-5">
+            <h2>Suite Familiar.</h2>
+            <p class="text-justify">Disfrute de un merecido descanso en nuestra habitación suite doble equipada con dos camas dobles y sofá perfecto para una estancia en familia. Dispone de aire acondicionado, TV de pantalla plana y cable, ducha y baño, artículos de aseo gratuitos, espejo de vanidad, secador de pelo, espejo de cuerpo completo, conexión wifi, caja de seguridad, mesa de trabajo, 2 burós, refrigerador, plancha y tabla de planchar, teléfono, radio-reloj despertador, cafetera y café incluido, agua embotellada de cortesía.</p>
+        </div>
+
+    </div>
+    </div>
+</div>
+
+{% endblock %}

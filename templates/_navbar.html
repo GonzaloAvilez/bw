@@ -1,0 +1,95 @@
+{% load static %}
+
+<nav id="navbar" class="
+navbar 
+navbar-expand-lg
+fixed-top
+navbar-light
+"
+style="padding:1rem 0px;"
+>
+  	<a class="navbar-brand" href="{% url 'home' %}" style="color:white">
+      	<img id="logo_brand" src="{% static 'img/BW_Logo_Horizontal_Reversed.png' %}" width="150" alt="">
+  	</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse navbar-container" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+             
+              <li class="nav-item">
+                  <a class="nav-link main_font" href="{% url 'rooms' %}">HABITACIONES<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link main_font" style="color:white" href="#">PROMOCIONES</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link main_font" style="color:white" href="{% url 'servicios' %}">SERVICIOS</a>
+              </li>
+              <li class="nav-item">
+                  <a href="https://www.bestwestern.com/es_ES/legal/bwr-terms-conditions.html" class="nav-link main_font" style="color:white" href="#">BEST WESTERN REWARDS</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link main_font" style="color:white" href="#">GALERIA</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link main_font" style="color:white" href="#">DESCUBRE TAXCO</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link main_font" style="color:white" href="{% url 'contact_form' %}">CONTACTO</a>
+              </li>
+          </ul>
+          <ul class="navbar-nav mr-right">
+          </ul>
+    </div>
+</nav>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var customNavBar = {
+      flagAdd: true,
+      elements: [],
+      init: function (elements) {
+          this.elements = elements;
+      },
+      add : function() {
+          if(this.flagAdd) {
+              for(var i=0; i < this.elements.length; i++) {
+                  document.getElementById(this.elements[i]).className += " fixed-theme";
+              }
+              this.flagAdd = false;
+          }
+          $("#logo_brand").attr("src","/static/img/BW_Logo_Horizontal.png");
+      },
+      remove: function() {
+          for(var i=0; i < this.elements.length; i++) {
+              document.getElementById(this.elements[i]).className =
+                      document.getElementById(this.elements[i]).className.replace( /(?:^|\s)fixed-theme(?!\S)/g , '' );
+          }
+          this.flagAdd = true;
+          $("#logo_brand").attr("src","/static/img/BW_Logo_Horizontal_Reversed.png");
+      }
+  };
+  customNavBar.init(  [
+      "navbar",
+  ]);
+
+  function offSetManager(){
+      var yOffset = 0;
+      var currYOffSet = window.pageYOffset;
+      if(yOffset < currYOffSet) {
+          customNavBar.add();
+      }
+      else if(currYOffSet == yOffset){
+          customNavBar.remove();
+      }
+  }
+  window.onscroll = function(e) {
+      offSetManager();
+  }
+  offSetManager();
+});
+</script>

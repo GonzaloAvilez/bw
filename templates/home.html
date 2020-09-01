@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load staticfiles %}
+
+{% block custom_style %}
+<link rel="stylesheet" href="{% static 'css/main.css'%}" type="text/css">
+{% endblock %}
+
+{% block content %}
+	{# carousel #}
+	<div id="bw_carousel" class="carousel slide" data-ride="carousel">
+		<ol class="carousel-indicators">
+			{# slider identifiers #}
+			{% for item in total_slides %}
+				{% if forloop.first %}
+					<li data-target="#bw_carousel" data-slide-to="{{ forloop.counter0 }}" class="active"></li>
+				{% else %}
+					<li data-target="#bw_carousel" data-slide-to="{{ forloop.counter0 }}"></li>
+				{% endif %}
+			{% endfor %}
+		</ol>
+		{# dynamic slider  content #}
+		<div class="carousel-inner">
+			{% for slide in slides %}
+				{% if forloop.first %}
+					<div class="carousel-item active">
+						<div class="_slider" style="background-image: url({{slide.image.url}});">
+						</div>
+					</div>
+				{% else %}
+					<div class="carousel-item">
+						<div class="_slider" style="background-image: url({{slide.image.url}});">
+						</div>
+					</div>
+				{% endif %}
+			{% endfor %}
+		</div>
+
+		{# silder navigation control #}
+		<a class="carousel-control-prev" href="#bw_carousel" role="button" data-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="carousel-control-next" href="#bw_carousel" role="button" data-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+	</div>
+	{# ******** #}
+
+	<div class="container-fluid">
+		<div class="row _margin_content">
+			<div class="mx-auto mb-md-5 mt-5 text-left p-5" style="">
+			  <h1 class="text-center">Best Western Taxco</h1>
+			  	<p style="text-align: justify;">Bienvenido al Best Western Taxco, situado en el corazón de este maravilloso Pueblo Mágico, su privilegiada ubicación (a 2 min del centro histórico) le permiten un fácil acceso a los principales sitios de interés. Disfrute de una agradable y romántica caminata por sus calles empedradas, sus casitas de tejado rojo, con fachadas blancas y balconcitos adornados de flores, en un ambiente colonial y de pintorescos paisajes, admirar la majestuosa Catedral de Santa Prisca y San Sebastián, un viaje en teleférico en pareja,  degustar platillos regionales en los más exquisitos restaurantes, visite las joyerías de plata, museos, mercaditos artesanales y más... </p>
+				<p style="text-align: justify;">Viva una experiencia de aventura visitando las vibrantes atracciones naturales: adéntrese en una maravilla natural las Grutas de Cacahuamilpa, un chapuzón en Pozas Azules, explore la Mina Prehispánica y asómbrese con la riqueza que guarda al interior. </p>
+				<p style="text-align: justify;">Nuestras 23 modernas y confortables habitaciones equipadas con aire acondicionado y magníficas amenidades harán de su visita una estancia ideal. Nuestro personal siempre dispuesto a brindarle un servicio especializado y apoyarle a planificar su día, con información turística y de interés para conocer el Taxco Pueblo  Mágico de ensueño.</p>
+				<p style="text-align: justify;">Si desea convertir sus próximas vacaciones o su viaje de negocios en una experiencia ideal, en Best Western Taxco estamos listos para brindarle un servicio de corazón y compartir el espíritu de hospitalidad que reside en nuestra familia Best Western.</p>
+			</div>
+		</div>
+		<div class="row text-center">
+			<div class="col-lg-4" style="height:350px;">
+				<a href="">
+					<img  class="img-thumbnail" src="{% static '/img/Standard_Single_Room.jpg'%}" style="width:100%; height:100%; object-position: center;
+		            object-fit: cover;">
+				</a>
+				<p>Habitación Individual Estándar</p>
+
+			</div>
+			<div class="col-lg-4" style="height:350px;">
+				<a href="">
+					<img class="img-thumbnail" src="{% static '/img/King_Room.jpeg'%}" style="width:100%; height:100%; 
+		            object-position: center;
+		            object-fit: cover;">
+				</a>
+				<p>Habitación Estándar King Size</p>
+			</div>
+			<div class="col-lg-4" style="height:350px;">
+				<a href="">
+					<img class="img-thumbnail" src="{% static '/img/Standard_Double_Room.jpg'%}" style="width:100%; height:100%;
+					object-position: center;
+		            object-fit: cover;">
+				</a>
+				<p>Habitación Doble Estándar (2 camas dobles)</p>
+			</div>
+		</div>
+
+		<div class="row px-auto p-md-5 pb-5">
+			<div class="col-lg-12 text-center">
+				<h1>SERVICIOS</h1>
+			</div>
+			<div class="col-lg-4 col-sm-12 services">
+				<li>23 habitaciones</li>
+				<li>Aire acondicionado</li>
+				<li>Conexión de wifi</li>
+				<li>Centro de negocios</li>
+				<li>Estacionamiento</li>
+				<li>Servicio de valet parking</li>
+				<li>Spa</li>
+				<li>Programa de lealtad BWR</li>
+				<li>Té / Café en habitación</li>
+			</div>
+			<div class="col-lg-4 col-sm-12 services">
+				<li>Botella de agua en habitación</li>
+				<li>Servicio a cuarto</li>
+				<li>Caja de seguridad (en recepción)</li>
+				<li>Desayuno temprano express (bajo solicitud)</li>
+				<li>Servicio de despertador</li>
+				<li>Servicio de limpieza de habitaciones</li>
+				<li>Sanitización de habitaciones e instalaciones</li>
+				<li>Plancha y tabla (bajo solicitud)</li>
+				<li>Lavandería ($)</li>
+			</div>
+			<div class="col-lg-4 col-sm-12 services">
+				<li>Camas plegables adicionales ($)</li>
+				<li>Venta de sodas y snacks</li>
+				<li>Recepción 24 horas</li>
+				<li>Check out express</li>
+				<li>Información Turística</li>
+				<li>Mapa de la ciudad</li>
+				<li>5 minutos de central de autobús</li>
+				<li>Consigna de equipaje</li>
+				<li>Servicio de impresión, fotocopiado, fax (en recepción)</li>
+			</div>
+		</div>
+	</div>
+
+
+{% endblock %}
+
+
+{% block custom_scripts %}
+<script type="text/javascript">
+	$('.carousel').carousel();
+</script>
+<script type="text/javascript">
+	window.onscroll = function() {scrollFunction()};
+</script>
+
+{% endblock %}

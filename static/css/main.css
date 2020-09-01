@@ -1,0 +1,150 @@
+/*.row {
+	padding: 100px;
+}
+*/
+._margin_content {
+	padding-left: 100px;
+	padding-right: 100px;
+}
+.navbar {
+	opacity: 0.9;
+}
+.nav-link {
+	font-size: 14px;
+}
+._slider {
+ 	height: 100vh;
+    background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	-moz-background-size: cover;
+
+}
+
+.services > li {
+	list-style-type: none;
+	margin-left: 40px !important;
+}
+
+.services > li:before {
+	background-image: url('/static/img/blue_circle.png');
+	background-size: 10px 10px;
+    display: inline-block;
+    width: 10px; 
+    height: 10px;
+    content:"";
+    margin-right: 5px;
+}
+
+
+.nav-link:hover {
+	font-weight: bold;
+}
+.slider_0 {
+	background-image: url(/static/img/bw.jpg);
+}
+.slider_1 {
+	background-image: url(/static/img/lobby.jpg);
+}
+
+.slider_2 {
+	background-image: url(/static/img/Standard_Double_Room.jpg);
+}
+
+.slider_2 {
+	background-image: url(/static/img/Reception.jpg);
+}
+
+
+.main_font {
+	color: white !important;
+}
+
+
+.fixed-theme {
+	transition: 0.8s;
+    -webkit-transition:  0.8s;
+	font-size: 12px;
+    background-color: white;
+    border-color: #080808;
+    box-shadow: 0 0 5px rgba(0,0,0,.8);
+}
+
+.fixed-theme  img{
+	width: 120px;
+}
+
+.fixed-theme .main_font{
+	color: #003c7e !important;
+}	
+
+.navbar {
+	transition: 0.8s;
+    -webkit-transition:  0.8s;
+}
+
+
+
+._footer_text {
+	margin-bottom: 5px;
+}
+
+.btn-floating {
+	border: solid 1px white;
+	border-radius: 0px;
+}
+
+._fab_decorator {
+	padding: 0.5rem;
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+	border: solid 1px white;
+	min-width: 2.5rem;
+}
+.fab {
+	font-size: 1.5rem;
+}
+.fab:hover {
+	background-color:rgba(255, 255, 255, 0.3);
+	background-color:rgba(0, 0, 0, 0.8);
+}
+
+.vertical-line {
+	display: inline-block;
+	width: 1px;
+    height: 15px;
+    background-color: white;
+    color: white;
+    margin: 0px 5px;
+}
+
+.legals {
+	margin-bottom: 1px;
+    font-size: 12px;
+}
+.contact_header:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: red;
+	opacity: 0.7;
+	z-index: 0;
+}
+
+
+@media (max-width: 600px) {
+  ._margin_content {
+    padding: 0px;
+  }
+}
+
+
+
+
+
+
+

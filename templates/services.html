@@ -1,0 +1,103 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12" style="height:370px; padding:0px; background-color:black;">
+            <img class="contact_header" src="{% static 'img/bw.jpg' %}" 
+            style="background-image: url({{ STATIC_URL }}{{'img/bw.jpg'}});
+            width:100%;
+            height: 100%;
+            object-position: center;
+            object-fit: cover;
+            opacity:0.6;
+            "
+            >
+            <h1 style="
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color:white;">SERVICIOS</h1>
+        </div>
+    </div>
+    <div class="container">
+    <div class="row mt-5 mb-5">
+        <div class="col-md-5 mt-3">
+            <div class="" style="height:250px;">
+                <a href="">
+                    <img  class="" src="{% static '/img/services/standard_single_room.jpg'%}" alt="habitación estándar" title="habitación" style="
+                    width:100%; 
+                    height:100%; 
+                    object-position: center;
+                    object-fit: cover;
+                    ">
+                </a>
+            </div>
+        </div>
+        <div class="col-md-7 mt-3">
+            <h2>Habitaciones</h2>
+            <p class="text-justify">Nuestras 23 habitaciones fusionan un estilo moderno y de confort, todas equipadas con aire acondicionado, conexión wifi, y magníficas amenidades que harán de su visita una estancia ideal.</p>
+        </div>
+
+        
+        <div class="col-md-7 mt-3">
+            <h2>Centro de Negocios</h2>
+            <p class="text-justify">Si su viaje es de trabajo, visite nuestro Centro de Negocios, equipado con computadoras conectadas a internet. Usted podrá recibir y enviar correos electrónicos y faxes, editar, imprimir documentos (en blanco y negro), escanear y fotocopiar, entre otras funciones. Para su comodidad el servicio disponible las 24hrs.</p>
+        </div>
+        <div class="col-md-5 mt-3">
+                <a href="">
+                    <img  class="" src="{% static '/img/services/business_center.jpg'%}" alt="Centro de negocios" style="
+                    width:100%; 
+                    height:100%; 
+                    object-position: center;
+                    object-fit: cover;
+                    ">
+                </a>
+        </div>
+
+        <div class="col-md-5 mt-3">
+            <div class="" style="height:250px;">
+                <a href="">
+                    <img  class="" src="{% static '/img/services/spa.jpg'%}" alt="Spa" style="
+                    width:100%; 
+                    height:100%; 
+                    object-position: center;
+                    object-fit: cover;
+                    ">
+                </a>
+            </div>
+        </div>
+        <div class="col-md-7 mt-3">
+            <h2>Spa Luna  de Plata</h2>
+            <p class="text-justify">Disfrute de un exquisito y relajante masaje en nuestro spa, una experiencia sensorial que es un verdadero regalo para el cuerpo y alma. </p>
+        </div>
+
+        
+        <div class="col-md-7 mt-5">
+            <h2>Best Western Rewards</h2>
+            <p class="text-justify">La fidelidad tiene premio con nuestro programa de lealtad Best Western Rewards. Acumule puntos para canjearlos por tarjetas de regalo, noches de alojamiento gratuito, millas aéreas y exclusivas aventuras. Obtenga premios e incentivos instantáneos. </p>
+            <p style="margin:0.5rem;" >✔ Noches gratuitas de alojamiento en todo el mundo</p>
+            <p style="margin:0.5rem;">✔ Tarifas exclusivas para miembros Best Western Rewards</p>
+            <p style="margin:0.5rem;">✔ Puntos sin fecha límite de caducidad</p>
+            <p style="margin:0.5rem;">✔ Status Match...No Catch®</p>
+            <p style="margin:0.5rem;">✔ Premios instantáneos e incentivos</p>
+            
+        </div>
+        <div class="col-md-5 mt-3">
+                <a href="">
+                    <img  class="" src="{% static '/img/services/BWR.png'%}" alt="Best Western Rewards" style="
+                    width:100%; 
+                    height: auto; 
+                    object-position: center;
+                    object-fit: cover;
+                    ">
+                </a>
+        </div>
+    </div>
+    </div>
+</div>
+
+{% endblock %}
